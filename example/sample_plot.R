@@ -5,7 +5,7 @@ library(aeplot)
 myData<-read.csv("./example/sample_data.csv")
 plot1<- aeplot(
   myData,
-  groups=c("intervention","placebo"),
+  groups=c("intervention","control"),
   ngroups=c(350,350),
   grouplabel=c("Treatment","Control"),
   cut=6,
@@ -13,6 +13,6 @@ plot1<- aeplot(
   title="AE Prevelance (6% or greater)"
 )
 
-pdf(file="./example/myplot.pdf", height=11, width=8.5)
+pdf(file="./example/sample_plot.pdf", height=11, width=8.5)
 print(plot1)
 dev.off()
