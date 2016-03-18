@@ -79,7 +79,7 @@ aeplot <- function(
   ae.summary <- make_summary_data(data, groups, ngroups, numerator)
 
   ######### Part 2: Prepare the data for plotting ##############################
-  plot.data <- make_plot_data(ae.summary, cut)
+  plot.data <- make_plot_data(ae.summary, cut, cut_organ_class)
 
   ######## Part 3: Create the Lattice Figure ###################################
   # Creates a 1 record per Prefferred Name plot of AE Prevelance with annotated
@@ -103,7 +103,7 @@ aeplot <- function(
 
   ## Create the pdf
   pdf(file=pathout, height=11, width=8.5)
-  trellis.par.set("axis.line", list(col=NA, lty=1, lwd=1))
+  lattice::trellis.par.set("axis.line", list(col=NA, lty=1, lwd=1))
 
   print(
     lattice::xyplot(index~max.percent | page, data = plot.data,

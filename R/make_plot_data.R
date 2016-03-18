@@ -1,4 +1,4 @@
-make_plot_data<-function(ae.summary, cut){
+make_plot_data<-function(ae.summary, cut, cut_organ_class){
 
   ## Clean up a label to be plotted
   trim <- function (x) gsub("^\\s+|\\s+$", "", x)
