@@ -4,14 +4,17 @@ aeplot() is an R package that generates summary Plots of Adverse Event Prevelanc
 
 #Typical usage
 A typical call to aeplot() creates output like this: 
-![sample aeplot](/example/myplot.png)
+![sample aeplot](/example/sample_plot.png)
 
 Using code like this: 
 
 ```R
+install_github("rhoinc/aeplot")
+library(aeplot)
+
 myData<-read.csv("myData.csv")
 plot1<- aeplot(
- 	  myData,                        
+    myData,                        
     groups=c("intervention","placebo"),
     ngroups=c(280,272),                     
     grouplabel=c("Treatment","Control"),                                
@@ -29,7 +32,7 @@ dev.off()
 
 `aeplot()` takes several arguements:
 
-## `data`
+##data
 *RData* _required_
 
 An Rdata file with one record per AE, and (at a minimum) the following 4 columns:
@@ -38,7 +41,7 @@ An Rdata file with one record per AE, and (at a minimum) the following 4 columns
  3. PreferredName(text)
  4. Group (text)
 
-## `groups` 
+##groups 
 *array* _required_   
 
 Array specifying the groups to be included in the plot. wording must match the raw data,  like `c("placebo","treatment")`
@@ -83,6 +86,3 @@ Sets group colors in the adverse event plot. Group colors default to "set1" in R
 *array*
 
 Group names to be printed in the column header.
-
-        
-
