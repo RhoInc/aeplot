@@ -1,0 +1,11 @@
+Package: aeplot
+Type: Package
+Title: Adverse Event Plot
+Version: 0.1.0
+Authors@R: person("Jeremy", "Wildfire", email = "jeremy_wildfire@rhoworld.com", role = c("aut", "cre"))
+Description: Creates an adverse event plot for clinical trial data.
+License: CC BY 4.0
+LazyData: TRUE
+Imports:
+    lattice (>= 0.20-33),
+    RColorBrewer (>= 1.1-2)
