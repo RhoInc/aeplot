@@ -4,6 +4,7 @@ aeplot() is an R package that generates summary Plots of Adverse Event Prevelanc
 
 #Typical usage
 A typical call to aeplot() creates output like this: 
+![sample aeplot](/example/myplot.png)
 
 Using code like this: 
 
