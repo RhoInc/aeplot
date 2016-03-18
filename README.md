@@ -3,24 +3,26 @@
 aeplot() is an R package that generates summary Plots of Adverse Event Prevelance using lattice.
 
 #Typical usage
-A typical call to aeplot() looks like this: 
+A typical call to aeplot() creates output like this: 
+
+Using code like this: 
 
 ```R
- AEPlot(
- 	pathin="O:/Asthma/VizLibrary/AEfedex/data/ace.csv",                        
+myData<-read.csv("myData.csv")
+plot1<- aeplot(
+ 	  myData,                        
     groups=c("intervention","placebo"),
     ngroups=c(280,272),                     
-    pathout="O:/Asthma/VizLibrary/AEfedex/fig/AEPlot_3percent.csv",            
-    grouplabel=c("FeNO Group","Non-FeNO Group"),                                
+    grouplabel=c("Treatment","Control"),                                
     cut=3,
     cut_organ_class=F,
-    title="AE Prevelance in ACE (3% or greater)"
-)                  
+    title="AE Prevelance (3% or greater)"
+)    
+
+pdf(file="myplot.pdf", height=11, width=8.5)
+    print(plot1)
+dev.off()
 ```
-
-And creates the following output:
-
-**Image coming soon**
 
 #Paramaters
 
@@ -59,7 +61,7 @@ Flag to indicate whether `cut` should be applied to organ class as well as prefe
 
 **default:** `false`
 
-numerator
+##numerator
 *character*
 
 Indicates the numerator for rates given in the adverse event plot. Valid options are: 
