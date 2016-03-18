@@ -8,4 +8,5 @@ License: CC BY 4.0
 LazyData: TRUE
 Imports:
     lattice (>= 0.20-33),
-    RColorBrewer (>= 1.1-2)
+    RColorBrewer (>= 1.1-2),
+    stringr (>= 1.0.0)
