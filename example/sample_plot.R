@@ -1,4 +1,5 @@
 #Run using library on github
+require(devtools)
 install_github("rhoinc/aeplot")
 library(aeplot)
 
