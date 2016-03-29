@@ -28,7 +28,7 @@ pdf(file="myplot.pdf", height=11, width=8.5)
 dev.off()
 ```
 
-#Paramaters
+#Configuration
 
 `aeplot()` takes several arguements:
 
